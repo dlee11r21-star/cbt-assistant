@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TranscriptionWindow = ({ transcript, highlights }) => (
+export const TranscriptionWindow = React.memo(({ transcript, highlights }) => (
   <div style={{background:'#fff',padding:'1em',borderRadius:'8px',minHeight:'120px',fontFamily:'monospace'}}>
     {transcript.split(' ').map((word,i)=>
       highlights[i] 
@@ -8,4 +8,4 @@ export const TranscriptionWindow = ({ transcript, highlights }) => (
         : <span key={i}>{word+' '}</span>
     )}
   </div>
-);
+));
