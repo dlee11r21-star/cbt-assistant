@@ -8,11 +8,11 @@ const cdPatterns = [
   { type: 'Catastrophizing', regex: /(disaster|ruined|hopeless|worst( case)?|awful|terrible)/i },
 ];
 
+const lowSensitivityPatterns = cdPatterns.slice(0, 2);
+
 // sensitivity: 'low', 'medium', 'high'
 function detectCDs(text, sensitivity = 'medium') {
-  let patternsToCheck = cdPatterns;
-  if (sensitivity === 'low') patternsToCheck = cdPatterns.filter((p,i)=>i<=1);
-  if (sensitivity === 'high') patternsToCheck = cdPatterns; // (future: add more patterns)
+  const patternsToCheck = sensitivity === 'low' ? lowSensitivityPatterns : cdPatterns;
   return patternsToCheck.reduce((found, pattern) => {
     if (pattern.regex.test(text)) found.push(pattern.type);
     return found;
