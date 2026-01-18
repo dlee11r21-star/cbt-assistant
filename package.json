@@ -1,0 +1,21 @@
+{
+  "name": "performance-optimization",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/core": "^7.23.3",
+    "babel-jest": "^29.7.0",
+    "react-test-renderer": "^18.2.0"
+  }
+}
