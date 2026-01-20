@@ -1,0 +1,15 @@
+
+> cbt-assistant@1.0.0 test
+> vitest --run
+
+
+ RUN  v1.6.1 /app
+
+ ✓ src/nlp/reframe-engine.test.js  (3 tests) 3ms
+ ✓ src/nlp/cd-detector.test.js  (7 tests) 9ms
+ ✓ src/App.test.jsx  (3 tests) 154ms
+
+ Test Files  3 passed (3)
+      Tests  13 passed (13)
+   Start at  22:47:30
+   Duration  1.82s (transform 214ms, setup 281ms, collect 532ms, tests 166ms, environment 1.89s, prepare 519ms)
