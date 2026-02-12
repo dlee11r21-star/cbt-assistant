@@ -1,6 +1,11 @@
 import beepSound from '../../assets/sounds/alert-beep.wav';
 
+let audioInstance = null;
+
 export function playBeep() {
-  const audio = new Audio(beepSound);
-  audio.play();
+  if (!audioInstance) {
+    audioInstance = new Audio(beepSound);
+  }
+  audioInstance.currentTime = 0;
+  audioInstance.play();
 }
